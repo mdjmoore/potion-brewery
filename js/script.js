@@ -20,75 +20,84 @@ const potionIngredients = {
 
     components: {
             batwing: {
-                property: 'another event'
+                property: 'uncontained laughter'
             },
             ptolemy: {
-                property: 'another event'
+                property: 'a sudden urge to jog'
             },
             lacewing: {
-                property: 'another event'
+                property: 'wingless flight'
             },
             honeywater: {
-                property: 'good event'
+                property: 'temporary invisibility'
             },
             squill: {
-                property: 'neutral event'
+                property: 'a sudden great skill at dancing'
             },
             tormentil: {
-                property: 'bad event'
+                property: 'an outbreak of boils'
                 
             },  
         },
     finishingTouch: {
-            viterol: {
-                property: 'bad side effect'
+            vitriol: {
+                property: 'bouts of violent rage'
             },
             newtseye: {
-                property: 'good side effect'
+                property: 'x-ray vision'
             },
             scarab: {
-                property: 'luck side effect'
+                property: 'an increase in luck'
             },
             leechleg: {
-                property: 'bad side effect'
+                property: 'sudden bleeding from the eyes'
             },
             briarheart: {
-                property: 'good side effect'
+                property: 'great swells of bravery'
             },
             mothwing: {
-                property: 'travel'
+                property: 'the sudden urge to travel'
             },
         }
 
 }
 
-// console.log(potionIngredients.herbs[3]);
-// console.log(potionIngredients.herbs.find((el) => el.title === 'foxglove'));
-
 
 $(function() {
+    let Ing1;
+    let Ing2;
+    let Ing3;
+    let prop1;
+    let prop2;
+    let prop3;
+
     $('form').on('submit', function(event) {
         event.preventDefault();
 
-        const Ing1 = $('input[name=potionIng1]:checked').val();
+        Ing1 = $('input[name=potionIng1]:checked').val();
         console.log(Ing1);
-        const prop1 = potionIngredients.herbs[Ing1].property;
+        prop1 = potionIngredients.herbs[Ing1].property;
         console.log(prop1);
 
-        const Ing2 = $('input[name=potionIng2]:checked').val();
+        Ing2 = $('input[name=potionIng2]:checked').val();
         console.log(Ing2);
-        const prop2 = potionIngredients.components[Ing2].property;
+        prop2 = potionIngredients.components[Ing2].property;
         console.log(prop2);
 
-        const Ing3 = $('input[name=potionIng3]:checked').val();
+        Ing3 = $('input[name=potionIng3]:checked').val();
         console.log(Ing3);
-        const prop3 = potionIngredients.finishingTouch[Ing3].property;
+        prop3 = potionIngredients.finishingTouch[Ing3].property;
         console.log(prop3);
+
+        const resultSentence = `A new and gently glowing potion sits in your hands. It will grant you ${prop1}. You may also experience ${prop2}. Be warned, ${prop3} is a common side effect of ${Ing3}. Enjoy!`;
+
+        $('.resultWords').html(`<p>${resultSentence}</p>`);
 
     });
 });
 
-console.log(prop1, prop2, prop3);
+
+
 
 
 
