@@ -15,7 +15,10 @@ const potionIngredients = {
             },
             calendula: {
                 property: 'unexpected joy'
-            },     
+            },  
+            elderberries: {
+                property: 'a fistful of pride'
+            }   
         },
 
     components: {
@@ -93,6 +96,19 @@ $(function() {
 
         $('.resultWords').html(`<p>${resultSentence}</p>`);
 
+    });
+});
+
+$(function () {
+    $('.brewIt').click(function () {
+        $('.potionResult').fadeToggle();
+    })
+    $(document).mouseup(function (e) {
+        var container = $('.potionResult');
+        if (!container.is(e.target)
+            && container.has(e.target).length === 0) {
+            container.fadeOut();
+        }
     });
 });
 

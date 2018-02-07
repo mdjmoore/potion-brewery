@@ -4,98 +4,185 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"> <!-- jQuery UI load -->
+    <link rel="stylesheet" href="styles/style.css">
     <title>Potion Brewery</title>
 </head>
 <body>
+    
     <header>
         <h1>Brew A Potion</h1>
     </header>
-    <main>
-        <div class="cauldron">
-            <img src="./assets/cauldron.png" alt="Icon of a cauldron">
-        </div>
-        <form action="" method="post">
-            <fieldset>
-                <legend>Herbs</legend>
-                <label for="sage">Sage</label>
-                <input type="radio" name="potionIng1" value="sage" id="sage">
-                
-                <label for="foxglove">Foxglove</label>
-                <input type="radio" name="potionIng1" value="foxglove" id="foxglove">
-                
-                <label for="yarrow">Yarrow</label>
-                <input type="radio" name="potionIng1" value="yarrow" id="yarrow">
-                
-                <label for="bloodroot">Bloodroot</label>
-                <input type="radio" name="potionIng1" value="bloodroot" id="bloodroot">
-                
-                <label for="calendula">Calendula</label>
-                <input type="radio" name="potionIng1" value="calendula" id="calendula">
-                
-                <label for="elderberries">Elderberries</label>
-                <input type="radio" name="potionIng1" value="elderberries" id="elderberries">
-            </fieldset>
-            
+
+    <div class="wrapper">
+        <main>
+            <div class="cauldron">
+                <img src="./assets/cauldron2.png" alt="Icon of a cauldron">
+            </div>
+            <form action="" method="post">
+                <fieldset>
+                    <legend>Herbs</legend>
+                    
+                    <div class="herbs">
+                        <label for="sage">Sage
+                            <input type="radio" name="potionIng1" value="sage" id="sage">
+                            <img src="./assets/sage.png" alt="line drawing of a sage leaf">
+                        </label>
+                    </div>
+                        
+                    <div class="herbs">
+                        <label for="foxglove">Foxglove
+                            <input type="radio" name="potionIng1" value="foxglove" id="foxglove">
+                            <img src="./assets/foxglove.png" alt="line drawing of some flowers">
+                        </label>
+                    </div>
+                    
+                       <div class="herbs">
+                        <label for="yarrow">Yarrow
+                            <input type="radio" name="potionIng1" value="yarrow" id="yarrow">
+                            <img src="./assets/yarrow.png" alt="line drawing of a dried clove">
+                        </label>
+                       </div> 
+                    
+                    <br>
+
+                    <div class="herbs">
+                        <label for="bloodroot">Bloodroot
+                            <input type="radio" name="potionIng1" value="bloodroot" id="bloodroot">
+                            <img src="./assets/bloodroot.png" alt="line drawing of a root vegetable">
+                        </label>
+                    </div>
+                    
+                    <div class="herbs">
+                        <label for="calendula">Calendula
+                            <input type="radio" name="potionIng1" value="calendula" id="calendula">
+                            <img src="./assets/calendula.png" alt="line drawing of a flower">
+                        </label>
+                    </div>
+                    
+                    <div class="herbs">
+                        <label for="elderberries">Elderberries
+                            <input type="radio" name="potionIng1" value="elderberries" id="elderberries">
+                            <img src="./assets/elderberries.png" alt="Line drawing of some dried berries">
+                        </label>
+                    </div>
+                    
+                </fieldset>
         
-
-            <fieldset>
-                <legend>Components</legend>
-                <label for="batwing">Batwing</label>
-                <input type="radio" name="potionIng2" value="batwing" id="batwing">
-            
-                <label for="ptolemy">Ptolemy</label>
-                <input type="radio" name="potionIng2" value="ptolemy" id="ptolemy">
-            
-                <label for="lacewing">Lacewing</label>
-                <input type="radio" name="potionIng2" value="lacewing" id="lacewing">
-                
-                <label for="honeywater">Honeywater</label>
-                <input type="radio" name="potionIng2" value="honeywater" id="honeywater">
-            
-                <label for="squill">Squill</label>
-                <input type="radio" name="potionIng2" value="squill" id="squill">
-            
-                <label for="tormentil">Tormentil</label>
-                <input type="radio" name="potionIng2" value="tormentil" id="tormentil">
-            </fieldset>
-            
         
+        
+                <fieldset>
+                    <legend>Components</legend>
 
-            <fieldset>
-                <legend>Finishing Touch</legend>
-                <label for="vitriol">Vitirol</label>
-                <input type="radio" name="potionIng3" value="vitriol" id="vitriol">
-                
-                <label for="newtseye">Newt's Eye</label>
-                <input type="radio" name="potionIng3" value="newtseye" id="newtseye">
-                
-                <label for="scarab">Scarab</label>
-                <input type="radio" name="potionIng3" value="scarab" id="scarab">
-                
-                <label for="leechleg">Leech Leg</label>
-                <input type="radio" name="potionIng3" value="leechleg" id="leechleg">
-                
-                <label for="briarheart">Briar Heart</label>
-                <input type="radio" name="potionIng3" value="briarheart" id="briarheart">
-                
-                <label for="mothwing">Moth Wing</label>
-                <input type="radio" name="potionIng3" value="mothwing" id="mothwing">
-            </fieldset>
+                        <div class="components">
+                            <label for="batwing">Batwing
+                                <input type="radio" name="potionIng2" value="batwing" id="batwing">
+                                <img src="./assets/batwing.png" alt="Line drawing of two bat wings">
+                            </label>
+                        </div>
+                        
+                        <div class="components">
+                            <label for="ptolemy">Ptolemy
+                                <input type="radio" name="potionIng2" value="ptolemy" id="ptolemy">
+                                <img src="./assets/ptolemy.png" alt="Line drawing of two dried spice pods">
+                            </label>
+                        </div>
             
+                        <div class="components">
+                            <label for="lacewing">Lacewing
+                                <input type="radio" name="potionIng2" value="lacewing" id="lacewing">
+                                <img src="./assets/lacewing.png" alt="Line drawing of a thin, delicate wing">
+                            </label>
+                        </div>
+                        <div class="components">
+                            <label for="honeywater">Honeywater
+                                <input type="radio" name="potionIng2" value="honeywater" id="honeywater">
+                                <img src="./assets/honeywater.png" alt="Line drawing of a honey dipper">
+                            </label>
+                        </div>
+            
+                        <div class="components">
+                            <label for="squill">Squill
+                                <input type="radio" name="potionIng2" value="squill" id="squill">
+                                <img src="./assets/squill.png" alt="line drawing of a bundle of sinnamon sticks">
+                            </label>
+                        </div>
+            
+                        <div class="components">
+                            <label for="tormentil">Tormentil
+                                <input type="radio" name="potionIng2" value="tormentil" id="tormentil">
+                                <img src="./assets/tormentil.png" alt="line drawing of a labelled vial">
+                            </label>
+                        </div>
+                </fieldset>
+        
+        
+        
+                <fieldset>
+                    <legend>Finishing Touch</legend>
 
-            <input type="submit" value="Brew it!">
-        </form>
+                    <div class="finish">
+                        <label for="vitriol">Vitirol
+                            <input type="radio" name="potionIng3" value="vitriol" id="vitriol">
+                            <img src="./assets/vitirol.png" alt="Line drawing of a bubbling beaker">
+                        </label>
+                    </div>
+        
+                    <div class="finish">
+                        <label for="newtseye">Newt's Eye
+                            <input type="radio" name="potionIng3" value="newtseye" id="newtseye">
+                            <img src="./assets/newtseye.png" alt="Line drawing of a plucked eyeball">
+                        </label>
+                    </div>
+        
+                    <div class="finish">
+                        <label for="scarab">Scarab
+                            <input type="radio" name="potionIng3" value="scarab" id="scarab">
+                            <img src="./assets/scarab.png" alt="Icon of a black scarab beetle">
+                        </label>
+                    </div>
 
-        <div class="potionResult">
-            <img src="./assets/potion.png" alt="Icon of three potion bottles.">
-            <div class="resultWords"></div>
-        </div>
-    </main>
+                    <div class="finish">
+                        <label for="leechleg">Leech Leg
+                            <input type="radio" name="potionIng3" value="leechleg" id="leechleg">
+                            <img src="./assets/leechleg.png" alt="Line drawing of a leech">
+                        </label>
+                    </div>
+        
+                    <div class="finish">
+                        <label for="briarheart">Briar Heart
+                            <input type="radio" name="potionIng3" value="briarheart" id="briarheart">
+                            <img src="./assets/briarheart.png" alt="line drawing of an artichoke">
+                        </label>
+                    </div>
+        
+                    <div class="finish">
+                        <label for="mothwing">Moth Wing
+                            <input type="radio" name="potionIng3" value="mothwing" id="mothwing">
+                            <img src="./assets/mothwing.png" alt="line drawing of a moth's wing">
+                        </label>
+                    </div>
+                </fieldset>
+        
+        
+                <input type="submit" class="brewIt" value="Brew it!">
+            </form>
+        
+            <div class="potionResult">
+                <img src="./assets/potion.png" alt="Icon of three potion bottles.">
+                <div class="resultWords"></div>
+            </div>
+        </main>
+    </div>
+    
     <footer>
-
+        <div class="wrapper">
+            <p>Thanks to Alex Muravev, Kale Maldjian, Julia Amadeo, Edorado Marconi, Kevin, Alice Noir, Saeful Muslim and Tomas Knopp of
+                the Noun Project for the icons.</p>
+        </div> 
     </footer>
-    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script> <!-- basic jQuery -->
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script> <!-- jQuery UI for droppable -->
     <script src="js/script.js"></script> <!-- link to js file -->
 </body>
 </html>
