@@ -125,8 +125,19 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 body {
+  font-size: 62.5%;
   width: 100%;
-  background-color: #FFEBFF; }
+  background-color: #FFEBFF;
+  font-family: 'Dosis', sans-serif;
+  color: #0D050F; }
+
+h1 {
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 3rem;
+  text-align: center; }
+
+p {
+  font-size: 1.25rem; }
 
 .wrapper {
   max-width: 1280px;
@@ -149,8 +160,9 @@ form {
   grid-area: form; }
 
 fieldset {
+  margin-bottom: 10px;
   max-width: 60%;
-  border: 1px solid magenta;
+  border: none;
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -167,12 +179,29 @@ fieldset {
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
   align-items: baseline; }
+  fieldset legend {
+    margin-left: 20%;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 1.5rem; }
+
+label {
+  font-size: 1.25rem;
+  text-align: center; }
 
 label > input {
   visibility: hidden;
   position: absolute; }
   label > input:checked + img {
     border-bottom: 2px solid #732C87; }
+
+input[type="submit"] {
+  padding: 16px 65px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.25rem;
+  background: #9F7AA1;
+  color: #FFEBFF;
+  text-align: center; }
 
 .herbs,
 .components,
@@ -186,11 +215,24 @@ label > input {
     max-height: 180px; }
 
 .potionResult {
-  display: none; }
+  display: none;
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  -webkit-transform: translate(-40%, -40%);
+  -ms-transform: translate(-40%, -40%);
+  transform: translate(-40%, -40%);
+  background: rgba(212, 168, 87, 0.87);
+  text-align: center;
+  padding: 2rem 2rem;
+  line-height: 30px;
+  border-radius: 5px; }
+  .potionResult img {
+    max-width: 50%; }
 
 footer {
   background-color: #0D050F;
   grid-area: footer; }
   footer p {
-    color: #D4A957;
+    color: rgba(212, 168, 87, 0.87);
     margin: 0; }

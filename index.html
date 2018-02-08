@@ -6,18 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"> <!-- jQuery UI load -->
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Dosis" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/your_new_images/apple-touch-icon-60x60.png">
+    <link rel="icon" type="image/png" href="./assets/your_new_images/favicon-16x16.png" sizes="16x16">
     <title>Potion Brewery</title>
 </head>
 <body>
     
     <header>
-        <h1>Brew A Potion</h1>
+        <h1 class="animated tada">Brew A Potion</h1>
     </header>
 
     <div class="wrapper">
         <main>
             <div class="cauldron">
-                <img src="./assets/cauldron2.png" alt="Icon of a cauldron">
+                <img src="./assets/cauldron2.png" class="droppable" alt="Icon of a cauldron">
             </div>
             <form action="" method="post">
                 <fieldset>
@@ -26,21 +31,21 @@
                     <div class="herbs">
                         <label for="sage">Sage
                             <input type="radio" name="potionIng1" value="sage" id="sage">
-                            <img src="./assets/sage.png" alt="line drawing of a sage leaf">
+                            <img src="./assets/sage.png" class="draggable" alt="line drawing of a sage leaf">
                         </label>
                     </div>
                         
                     <div class="herbs">
                         <label for="foxglove">Foxglove
                             <input type="radio" name="potionIng1" value="foxglove" id="foxglove">
-                            <img src="./assets/foxglove.png" alt="line drawing of some flowers">
+                            <img src="./assets/foxglove.png" class="draggable" alt="line drawing of some flowers">
                         </label>
                     </div>
                     
                        <div class="herbs">
                         <label for="yarrow">Yarrow
                             <input type="radio" name="potionIng1" value="yarrow" id="yarrow">
-                            <img src="./assets/yarrow.png" alt="line drawing of a dried clove">
+                            <img src="./assets/yarrow.png" class="draggable" alt="line drawing of a dried clove">
                         </label>
                        </div> 
                     
@@ -49,21 +54,21 @@
                     <div class="herbs">
                         <label for="bloodroot">Bloodroot
                             <input type="radio" name="potionIng1" value="bloodroot" id="bloodroot">
-                            <img src="./assets/bloodroot.png" alt="line drawing of a root vegetable">
+                            <img src="./assets/bloodroot.png" class="draggable" alt="line drawing of a root vegetable">
                         </label>
                     </div>
                     
                     <div class="herbs">
                         <label for="calendula">Calendula
                             <input type="radio" name="potionIng1" value="calendula" id="calendula">
-                            <img src="./assets/calendula.png" alt="line drawing of a flower">
+                            <img src="./assets/calendula.png" class="draggable" alt="line drawing of a flower">
                         </label>
                     </div>
                     
                     <div class="herbs">
                         <label for="elderberries">Elderberries
                             <input type="radio" name="potionIng1" value="elderberries" id="elderberries">
-                            <img src="./assets/elderberries.png" alt="Line drawing of some dried berries">
+                            <img src="./assets/elderberries.png" class="draggable" alt="Line drawing of some dried berries">
                         </label>
                     </div>
                     
@@ -171,6 +176,7 @@
             <div class="potionResult">
                 <img src="./assets/potion.png" alt="Icon of three potion bottles.">
                 <div class="resultWords"></div>
+                <input type="submit" class="again" value="Brew Another">
             </div>
         </main>
     </div>
@@ -182,7 +188,8 @@
         </div> 
     </footer>
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script> <!-- basic jQuery -->
-    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script> <!-- jQuery UI for droppable -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script> <!-- jQuery UI for droppable -->
     <script src="js/script.js"></script> <!-- link to js file -->
 </body>
 </html>

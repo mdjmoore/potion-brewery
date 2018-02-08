@@ -1,4 +1,6 @@
-const potionIngredients = {
+const potionApp = {}
+
+potionApp.potionIngredients = {
     herbs: {
         
             sage: {
@@ -66,6 +68,22 @@ const potionIngredients = {
 }
 
 
+$('.brewIt').click(function () {
+    $('.potionResult').fadeToggle();
+})
+$(document).mouseup(function (e) {
+    var container = $('.potionResult');
+    if (!container.is(e.target)
+        && container.has(e.target).length === 0) {
+        container.fadeOut();
+    }
+});
+
+$('.again').click(function (){
+    // container.fadeOut();
+    location.reload();
+});
+
 $(function() {
     let Ing1;
     let Ing2;
@@ -78,39 +96,53 @@ $(function() {
         event.preventDefault();
 
         Ing1 = $('input[name=potionIng1]:checked').val();
-        console.log(Ing1);
-        prop1 = potionIngredients.herbs[Ing1].property;
-        console.log(prop1);
+        prop1 = potionApp.potionIngredients.herbs[Ing1].property;
 
         Ing2 = $('input[name=potionIng2]:checked').val();
-        console.log(Ing2);
-        prop2 = potionIngredients.components[Ing2].property;
-        console.log(prop2);
+        prop2 = potionApp.potionIngredients.components[Ing2].property;
 
         Ing3 = $('input[name=potionIng3]:checked').val();
-        console.log(Ing3);
-        prop3 = potionIngredients.finishingTouch[Ing3].property;
-        console.log(prop3);
+        prop3 = potionApp.potionIngredients.finishingTouch[Ing3].property;
 
-        const resultSentence = `A new and gently glowing potion sits in your hands. It will grant you ${prop1}. You may also experience ${prop2}. Be warned, ${prop3} is a common side effect of ${Ing3}. Enjoy!`;
+        potionApp.resultSentence = `A new and gently glowing potion sits in your hands. It will grant you ${prop1}. You may also experience ${prop2}. Be warned, ${prop3} is a common side effect of ${Ing1}. Enjoy!`;
 
-        $('.resultWords').html(`<p>${resultSentence}</p>`);
+        $('.resultWords').html(`<p>${potionApp.resultSentence}</p>`);
 
     });
 });
 
-$(function () {
-    $('.brewIt').click(function () {
-        $('.potionResult').fadeToggle();
-    })
-    $(document).mouseup(function (e) {
-        var container = $('.potionResult');
-        if (!container.is(e.target)
-            && container.has(e.target).length === 0) {
-            container.fadeOut();
-        }
-    });
+
+// potionApp.init = function () {
+//     potionApp.brewPopUp();
+// }
+
+// $(document).ready(function (){
+//     potionApp.init();
+// });
+// $(function () {
+//     $('.brewIt').click(function () {
+//         $('.potionResult').fadeToggle();
+//     })
+//     $(document).mouseup(function (e) {
+//         var container = $('.potionResult');
+//         if (!container.is(e.target)
+//             && container.has(e.target).length === 0) {
+//             container.fadeOut();
+//         }
+//     });
+// });
+
+
+
+$('.draggable').dragabble({
+    cancel: false,
+    revert: true,
 });
+$('.droppable').droppable({
+    accept: ".draggable",
+    tolerance: "touch"
+});
+
 
 
 
