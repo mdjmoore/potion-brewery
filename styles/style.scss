@@ -1,7 +1,8 @@
 $white:#FFEBFF;
+$grey: #747573;
 $black:#0D050F;
 $boldPurple:#732C87;
-$parchment:rgba(212, 168, 87, 0.87);
+$parchment:rgb(212, 168, 87);
 $mutedPurple:#9F7AA1;
 
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
@@ -16,6 +17,11 @@ body {
     color:$black;
 }
 
+header {
+    margin-bottom:50px;
+    padding:20px;
+}
+
 h1 {
     font-family: 'Berkshire Swash', cursive;
     font-size: 3rem;
@@ -24,18 +30,92 @@ h1 {
 
 p {
     font-size: 1.25rem;
+    text-align: center;
 }
 
 .wrapper {
-    max-width:1280px;
+    max-width:1180px;
+    width:90%;
     margin: 0 auto;
+}
+
+@keyframes pop {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        top:10px;
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+.big,
+.medium,
+.small,
+.xsmall {
+    max-width:60px;
+    position: absolute;
+    animation: pop 1s ease-in infinite;
+}
+
+.big {
+    left: 200px;
+    top:400px;
+    @media (max-width:820px) {
+        top:150px;
+    }
+}
+
+.medium {
+    top:410px;
+    left:300px;
+    max-width:40px;
+    animation-delay: 0.2s;
+    @media (max-width:820px) {
+        top:200px;
+    }
+}
+
+.small {
+    top:397px;
+    left: 260px;
+    max-width: 27px;
+    transform: rotate(40deg);
+    animation-delay: 0.5s;
+    @media (max-width:820px) {
+        top:210px;
+    }
+    // rotation makes img fuzzy, deep dive later
+}
+
+.xsmall {
+    top:395px;
+    left:300px;
+    max-width: 20px;
+    transform: rotate(35deg);
+    animation-delay: 0.6s;
+    @media (max-width:820px) {
+        top:200px;
+    }
 }
 
 .cauldron {
     grid-area: cauldron;
     padding-top:200px;
-    img {
-        max-width: 100%;
+    position: fixed;
+    margin:0 auto;
+    bottom:10px;
+    .droppable {
+        max-width: 90%;
+    }
+    @media (max-width:820px) {
+        position: relative;
+        padding-top:0;
+    }
+    @media (max-width:480px) {
+        padding-top:0;
     }
 }
 
@@ -46,6 +126,13 @@ main {
     grid-gap:20px;
     grid-template-areas: "cauldron form"
                          "footer footer";
+    
+    @media (max-width:820px) {
+        grid-template-areas: 
+        "form form"
+        "cauldron cauldron"
+        "footer footer"
+    }
 }
 
 form {
@@ -53,7 +140,7 @@ form {
 }
 
 fieldset {
-    margin-bottom:10px;
+    margin:auto;
     max-width:60%;
     border:none;
     padding:10px;
@@ -66,12 +153,16 @@ fieldset {
         margin-left:20%;
         font-family: 'Berkshire Swash', cursive;
         font-size: 1.5rem;
+        @media (max-width:480px) {
+        text-align: left;
+        margin-left:0;
+    }
     }
 }
 
 label {
     font-size: 1.25rem;
-    text-align: center;
+    text-align: right;
 }
 
 
@@ -88,31 +179,46 @@ input[type="submit"] {
     border-radius: 5px;
     border:none;
     font-size: 1.25rem;
-    background: $mutedPurple;
+    background: $boldPurple;
     color:$white;
     text-align: center;
+    border:2px solid $grey;
+    @media (max-width:480px) {
+        margin-left:27%;
+    }
 }
 
 .herbs,
 .components,
 .finish {
-    max-width: calc(33.33% - 10px);
-    margin:5px;
+    max-width: calc(33.33% - 20px);
+    margin:10px;
     img {
         max-width:100%;
         max-height:180px;
     }
+
+    @media (max-width:820px) {
+        max-width:calc(33.33%% - 10px);
+        margin:5px;
+    }
+
+    @media (max-width:480px) {
+        max-width: calc(33.33% - 10px);
+        margin:5px;
+    }
 }
 
 .potionResult {
+    max-width:50%;
     display: none;
     position: fixed;
     top:40%;
-    left:40%;
+    left:70%;
     transform: translate(-40%, -40%);
     background: $parchment;
     text-align: center;
-    padding:2rem 2rem;
+    padding:3rem;
     line-height: 30px;
     border-radius: 5px;
     img {
@@ -120,14 +226,18 @@ input[type="submit"] {
     }
 }
 
-
+.purple {
+    color:$mutedPurple;
+}
 
 
 footer {
     background-color: $black;
     grid-area: footer;
+    line-height:30px;
+    padding:3rem;
     p {
-        color:$parchment;
+        color:$grey;
         margin:0;
     }
 }

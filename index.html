@@ -5,23 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"> <!-- jQuery UI load -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Dosis" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" sizes="60x60" href="./assets/your_new_images/apple-touch-icon-60x60.png">
-    <link rel="icon" type="image/png" href="./assets/your_new_images/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="./assets/y/favicon-16x16.png" sizes="16x16">
     <title>Potion Brewery</title>
 </head>
 <body>
     
     <header>
         <h1 class="animated tada">Brew A Potion</h1>
+        <p>Click on an ingredient or drag it to the cauldron. Choose one from each category and hit <span class="purple">"Brew It"</span> to see your result</p>
     </header>
 
     <div class="wrapper">
         <main>
             <div class="cauldron">
+                <img src="./assets/bubble.png" class="big" alt="line drawing of a bubble">
+                <img src="./assets/bubble.png" class="medium" alt="line drawing of a bubble">
+                <img src="./assets/bubble.png" class="small" alt="line drawing of a bubble">
+                <img src="./assets/bubble.png" class="xsmall" alt="line drawing of a bubble">
                 <img src="./assets/cauldron2.png" class="droppable" alt="Icon of a cauldron">
             </div>
             <form action="" method="post">
@@ -29,21 +35,21 @@
                     <legend>Herbs</legend>
                     
                     <div class="herbs">
-                        <label for="sage">Sage
+                        <label for="sage"> <p>Sage</p> 
                             <input type="radio" name="potionIng1" value="sage" id="sage">
                             <img src="./assets/sage.png" class="draggable" alt="line drawing of a sage leaf">
                         </label>
                     </div>
                         
                     <div class="herbs">
-                        <label for="foxglove">Foxglove
+                        <label for="foxglove"><p>Foxglove</p>
                             <input type="radio" name="potionIng1" value="foxglove" id="foxglove">
                             <img src="./assets/foxglove.png" class="draggable" alt="line drawing of some flowers">
                         </label>
                     </div>
                     
                        <div class="herbs">
-                        <label for="yarrow">Yarrow
+                        <label for="yarrow"><p>Yarrow</p>
                             <input type="radio" name="potionIng1" value="yarrow" id="yarrow">
                             <img src="./assets/yarrow.png" class="draggable" alt="line drawing of a dried clove">
                         </label>
@@ -52,21 +58,21 @@
                     <br>
 
                     <div class="herbs">
-                        <label for="bloodroot">Bloodroot
+                        <label for="bloodroot"><p>Bloodroot</p>
                             <input type="radio" name="potionIng1" value="bloodroot" id="bloodroot">
-                            <img src="./assets/bloodroot.png" class="draggable" alt="line drawing of a root vegetable">
+                            <img src="./assets/bloodroot.png" data-option="bloodroot" class="draggable" alt="line drawing of a root vegetable">
                         </label>
                     </div>
                     
                     <div class="herbs">
-                        <label for="calendula">Calendula
+                        <label for="calendula"><p>Calendula</p>
                             <input type="radio" name="potionIng1" value="calendula" id="calendula">
                             <img src="./assets/calendula.png" class="draggable" alt="line drawing of a flower">
                         </label>
                     </div>
                     
                     <div class="herbs">
-                        <label for="elderberries">Elderberries
+                        <label for="elderberries"><p>Elderberries</p>
                             <input type="radio" name="potionIng1" value="elderberries" id="elderberries">
                             <img src="./assets/elderberries.png" class="draggable" alt="Line drawing of some dried berries">
                         </label>
@@ -80,43 +86,43 @@
                     <legend>Components</legend>
 
                         <div class="components">
-                            <label for="batwing">Batwing
+                            <label for="batwing"><p>Batwing</p>
                                 <input type="radio" name="potionIng2" value="batwing" id="batwing">
-                                <img src="./assets/batwing.png" alt="Line drawing of two bat wings">
+                                <img src="./assets/batwing.png" class="draggable" alt="Line drawing of two bat wings">
                             </label>
                         </div>
                         
                         <div class="components">
-                            <label for="ptolemy">Ptolemy
+                            <label for="ptolemy"><p>Ptolemy</p>
                                 <input type="radio" name="potionIng2" value="ptolemy" id="ptolemy">
-                                <img src="./assets/ptolemy.png" alt="Line drawing of two dried spice pods">
+                                <img src="./assets/ptolemy.png" class="draggable" alt="Line drawing of two dried spice pods">
                             </label>
                         </div>
             
                         <div class="components">
-                            <label for="lacewing">Lacewing
+                            <label for="lacewing"><p>Lacewing</p>
                                 <input type="radio" name="potionIng2" value="lacewing" id="lacewing">
-                                <img src="./assets/lacewing.png" alt="Line drawing of a thin, delicate wing">
+                                <img src="./assets/lacewing.png" class="draggable" alt="Line drawing of a thin, delicate wing">
                             </label>
                         </div>
                         <div class="components">
-                            <label for="honeywater">Honeywater
+                            <label for="honeywater"><p>Honeywater</p>
                                 <input type="radio" name="potionIng2" value="honeywater" id="honeywater">
-                                <img src="./assets/honeywater.png" alt="Line drawing of a honey dipper">
+                                <img src="./assets/honeywater.png" class="draggable" alt="Line drawing of a honey dipper">
                             </label>
                         </div>
             
                         <div class="components">
-                            <label for="squill">Squill
+                            <label for="squill"><p>Squill</p>
                                 <input type="radio" name="potionIng2" value="squill" id="squill">
-                                <img src="./assets/squill.png" alt="line drawing of a bundle of sinnamon sticks">
+                                <img src="./assets/squill.png" class="draggable" alt="line drawing of a bundle of sinnamon sticks">
                             </label>
                         </div>
             
                         <div class="components">
-                            <label for="tormentil">Tormentil
+                            <label for="tormentil"><p>Tormentil</p>
                                 <input type="radio" name="potionIng2" value="tormentil" id="tormentil">
-                                <img src="./assets/tormentil.png" alt="line drawing of a labelled vial">
+                                <img src="./assets/tormentil.png" class="draggable" alt="line drawing of a labelled vial">
                             </label>
                         </div>
                 </fieldset>
@@ -127,44 +133,44 @@
                     <legend>Finishing Touch</legend>
 
                     <div class="finish">
-                        <label for="vitriol">Vitirol
+                        <label for="vitriol"><p>Vitirol</p>
                             <input type="radio" name="potionIng3" value="vitriol" id="vitriol">
-                            <img src="./assets/vitirol.png" alt="Line drawing of a bubbling beaker">
+                            <img src="./assets/vitirol.png" class="draggable" alt="Line drawing of a bubbling beaker">
                         </label>
                     </div>
         
                     <div class="finish">
-                        <label for="newtseye">Newt's Eye
+                        <label for="newtseye"><p>Newt's Eye</p>
                             <input type="radio" name="potionIng3" value="newtseye" id="newtseye">
-                            <img src="./assets/newtseye.png" alt="Line drawing of a plucked eyeball">
+                            <img src="./assets/newtseye.png" class="draggable" alt="Line drawing of a plucked eyeball">
                         </label>
                     </div>
         
                     <div class="finish">
-                        <label for="scarab">Scarab
+                        <label for="scarab"><p>Scarab</p>
                             <input type="radio" name="potionIng3" value="scarab" id="scarab">
-                            <img src="./assets/scarab.png" alt="Icon of a black scarab beetle">
+                            <img src="./assets/scarab.png" class="draggable" alt="Icon of a black scarab beetle">
                         </label>
                     </div>
 
                     <div class="finish">
-                        <label for="leechleg">Leech Leg
+                        <label for="leechleg"><p>Leech Leg</p>
                             <input type="radio" name="potionIng3" value="leechleg" id="leechleg">
-                            <img src="./assets/leechleg.png" alt="Line drawing of a leech">
+                            <img src="./assets/leechleg.png" class="draggable" alt="Line drawing of a leech">
                         </label>
                     </div>
         
                     <div class="finish">
-                        <label for="briarheart">Briar Heart
+                        <label for="briarheart"><p>Briar Heart</p>
                             <input type="radio" name="potionIng3" value="briarheart" id="briarheart">
-                            <img src="./assets/briarheart.png" alt="line drawing of an artichoke">
+                            <img src="./assets/briarheart.png" class="draggable" alt="line drawing of an artichoke">
                         </label>
                     </div>
         
                     <div class="finish">
-                        <label for="mothwing">Moth Wing
+                        <label for="mothwing"><p>Moth Wing</p>
                             <input type="radio" name="potionIng3" value="mothwing" id="mothwing">
-                            <img src="./assets/mothwing.png" alt="line drawing of a moth's wing">
+                            <img src="./assets/mothwing.png" class="draggable" alt="line drawing of a moth's wing">
                         </label>
                     </div>
                 </fieldset>
@@ -183,13 +189,13 @@
     
     <footer>
         <div class="wrapper">
+            <p>made by <a href="http://www.mdjm.io/">Meagan Moore</a> <i class="fab fa-twitter"><a href="https://twitter.com/_mdjm"></a></i> <a href="https://github.com/mdjmoore"><i class="fab fa-github"></i></a></p>
             <p>Thanks to Alex Muravev, Kale Maldjian, Julia Amadeo, Edorado Marconi, Kevin, Alice Noir, Saeful Muslim and Tomas Knopp of
                 the Noun Project for the icons.</p>
         </div> 
     </footer>
-    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script> <!-- basic jQuery -->
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-        crossorigin="anonymous"></script> <!-- jQuery UI for droppable -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> <!-- jQuery UI for droppable -->
     <script src="js/script.js"></script> <!-- link to js file -->
 </body>
 </html>
