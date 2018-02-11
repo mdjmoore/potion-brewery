@@ -124,29 +124,38 @@ potionApp.init = function() {
 }
 $(function() {
     potionApp.init();
-    let dragCheck = false;
-
+    // let dragCheck = false;
 
     $('.draggable').draggable({
         revert: 'invalid',
-    });
-
-    $('.droppable').droppable({
-        drop: function(e, option) {
-            dragCheck = true;
-
-            console.log(option.draggable[0].dataset.option);
-            const herbs = option.draggable[0].dataset.category;
-
-            
+        drag: function() {
+            $(this).addClass('.fixed');
         }
     });
+    
+    $('.droppable').droppable({
+    });
+    
+    // $('.draggable').on('click', function(event) {
+    //     $('.draggable').addClass('.fixed');
 
-    if(dragCheck ===  true) {
-        option.draggable[0] = attr(':checked')
-    }
- 
+    // });
 });
+   
+
+//         drop: function(e, option) {
+//             dragCheck = true;
+
+//             console.log(option.draggable[0].dataset.option);
+//             const herbs = option.draggable[0].dataset.category;
+
+            
+//         }
+
+//     if(dragCheck ===  true) {
+//         option.draggable[0] = attr(':checked')
+//     }
+ 
 
 // potionApp.dragCheck = function() {
 //     $('.draggable').on('drag', function(){
