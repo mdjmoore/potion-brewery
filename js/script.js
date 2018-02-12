@@ -83,7 +83,6 @@ potionApp.toggleModal = function(){
 
 potionApp.startAgain = function() {
     $('.again').click(function (){
-        // container.fadeOut();
         location.reload();
     });
 }
@@ -128,33 +127,28 @@ $(function() {
 
     $('.draggable').draggable({
         revert: 'invalid',
-        drag: function() {
-            $(this).addClass('.fixed');
-        }
     });
-    
+
     $('.droppable').droppable({
     });
     
-    // $('.draggable').on('click', function(event) {
-    //     $('.draggable').addClass('.fixed');
-
-    // });
 });
    
 
-//         drop: function(e, option) {
-//             dragCheck = true;
+// This was my attempt at drag and drop - one of my stretch goals. Revisit this in the future
 
-//             console.log(option.draggable[0].dataset.option);
-//             const herbs = option.draggable[0].dataset.category;
+// drop: function(e, option) {
+//   dragCheck = true;
+
+//  console.log(option.draggable[0].dataset.option);
+//  const herbs = option.draggable[0].dataset.category;
 
             
-//         }
+//}
 
-//     if(dragCheck ===  true) {
-//         option.draggable[0] = attr(':checked')
-//     }
+//if(dragCheck ===  true) {
+//  option.draggable[0] = attr(':checked')
+// }
  
 
 // potionApp.dragCheck = function() {
